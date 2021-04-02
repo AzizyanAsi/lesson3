@@ -9,10 +9,8 @@ public class Arrays {
 
         System.out.println("\n2.Create an array and fill it with numbers from 1:1000");
         int[] arrNum = new int[1000];
-        int k = 0;
         for (int j = 0; j < arrNum.length; j++) {
-            k++;
-            arrNum[j] = k;
+            arrNum[j] = j+1;
             System.out.println(j + " " + arrNum[j]);
         }
         System.out.println("\n3.Create an array and fill it with odd numbers from -20:20");
@@ -49,17 +47,14 @@ public class Arrays {
         System.out.println("\n 7 .Given an integer, 0< N < 21 , print its first 10 multiples. \n" +
                 "Each multiple  N x i (where 0<i<11) should be printed on a new line in the form: N x i = result.\n");
         int N = 2;
-        for (int i = 1; i <= 10; i++) {
-            if (N > 0 && N < 21) {
+        if (N > 0 && N < 21) {
+            for (int i = 1; i <= 10; i++) {
                 int result = N * i;
                 String value = N + "x" + i + " = " + result;
                 System.out.println(value);
             }
-        }
-        if (N <= 0 || N >= 21)
+        } else
             System.out.println("////////it isn't in my range ///////////");
-
-
 
     }
 }
